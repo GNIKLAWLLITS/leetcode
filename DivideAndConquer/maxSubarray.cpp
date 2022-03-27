@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <vector>
+#include <climits>
 using namespace std;
 
 /**
@@ -31,7 +32,7 @@ int findMaxCrossingSubArray(vector<int> nums, int low, int mid, int high) {
     }
     // check right part
     int right_sum = INT_MIN; // maximum usn of right part
-    sum  =0; // sum(nums[mid+1..i])
+    sum = 0; // sum(nums[mid+1..i])
     int max_right = mid+1; // right index of maximum sub-array
     for (int i=mid+1;i<=high;i++) {
         sum += nums[i];
